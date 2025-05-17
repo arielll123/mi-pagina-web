@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TuniApp - Tu vida académica organizada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #0066cc;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #004a99;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      margin: 5px 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .cta-button {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #0066cc;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    footer {
+      text-align: center;
+      background-color: #004a99;
+      color: #fff;
+      padding: 20px;
+    }
+    .logo {
+      max-width: 150px;
+      margin: 20px auto;
+      display: block;
+    }
+    .tiktok {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .tiktok img {
+      width: 250px;
+      border-radius: 10px;
+    }
+    .demo {
+      background-color: #e0f2ff;
+      padding: 30px;
+      margin: 40px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .demo label, .demo input, .demo textarea, .demo select {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    .demo input, .demo textarea, .demo select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://i.imgur.com/2pOIYMT.png" alt="Logotipo TuniApp" class="logo" />
+    <h1>TuniApp</h1>
+    <p>Organiza tu vida académica, simplifica tu día</p>
+  </header>
+  <nav>
+    <a href="#funcionalidades">Funcionalidades</a>
+    <a href="#ventajas">Ventajas</a>
+    <a href="#descargar">Descargar</a>
+    <a href="#tuniapp-beta">TuniApp Beta</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="funcionalidades">
+    <h2>¿Qué puedes hacer con TuniApp?</h2>
+    <ul>
+      <li>Planificación de tareas y recordatorios inteligentes</li>
+      <li>Gestión de horarios académicos</li>
+      <li>Almacenamiento organizado de materiales</li>
+      <li>Colaboración entre compañeros</li>
+    </ul>
+  </section>
+
+  <section id="ventajas">
+    <h2>Ventajas de usar TuniApp</h2>
+    <p>Más del 85% de estudiantes entre 18 y 25 años presentan dificultades para organizarse. Esta app está diseñada para resolverlo:</p>
+    <ul>
+      <li>Interfaz intuitiva y fácil de usar</li>
+      <li>Modelo freemium: funciones básicas gratis, premium accesible</li>
+      <li>Disponible en App Store y Google Play</li>
+      <li>Promocionada por influencers estudiantiles y universidades</li>
+    </ul>
+  </section>
+
+  <section id="descargar">
+    <h2>Descarga TuniApp</h2>
+    <p>¡Empieza a organizarte desde hoy!</p>
+    <a href="#" class="cta-button">Próximamente en App Store</a>
+    <a href="#" class="cta-button">Próximamente en Google Play</a>
+  </section>
+
+  <section class="tiktok">
+    <h2>Síguenos en TikTok</h2>
+    <p>@Tuni_App</p>
+    <img src="https://i.imgur.com/vcmcwwp.png" alt="QR TikTok TuniApp" />
+  </section>
+
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <p>Para más información o colaboraciones con instituciones educativas:</p>
+    <p>Email: contacto@tuniapp.mx</p>
+    <p>Teléfono: +52 4861066933</p>
+  </section>
+
+  <section id="tuniapp-beta">
+    <h2>TuniApp Beta (Gestión de Horario)</h2>
+    <form id="formulario-beta" class="demo">
+      <label>Materia: <input type="text" id="beta-materia" required></label>
+      <label>Día:
+        <select id="beta-dia" required>
+          <option>Lunes</option>
+          <option>Martes</option>
+          <option>Miércoles</option>
+          <option>Jueves</option>
+          <option>Viernes</option>
+          <option>Sábado</option>
+          <option>Domingo</option>
+        </select>
+      </label>
+      <label>Hora: <input type="time" id="beta-hora" required></label>
+      <label>Alarma: <input type="time" id="beta-alarma" required></label>
+      <button type="submit">Agregar</button>
+    </form>
+
+    <table border="1" style="margin-top: 20px; width: 100%; border-collapse: collapse;">
+      <thead>
+        <tr>
+          <th>Materia</th>
+          <th>Día</th>
+          <th>Hora</th>
+          <th>Alarma</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody id="beta-tabla-body">
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TuniApp. Todos los derechos reservados.</p>
+  </footer>
+
+<script>
+document.getElementById('formulario-beta').addEventListener('submit', e => {
+  e.preventDefault();
+  const materia = document.getElementById('beta-materia').value;
+  const dia = document.getElementById('beta-dia').value;
+  const hora = document.getElementById('beta-hora').value;
+  const alarma = document.getElementById('beta-alarma').value;
+  const entrada = { materia, dia, hora, alarma };
+  const datos = JSON.parse(localStorage.getItem('horario-beta') || '[]');
+  datos.push(entrada);
+  localStorage.setItem('horario-beta', JSON.stringify(datos));
+  renderizarHorarioBeta();
+  programarAlarma(alarma, materia);
+  e.target.reset();
+});
+
+function renderizarHorarioBeta() {
+  const tbody = document.getElementById('beta-tabla-body');
+  tbody.innerHTML = '';
+  const datos = JSON.parse(localStorage.getItem('horario-beta') || '[]');
+  datos.forEach((e, i) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td>${e.materia}</td>
+      <td>${e.dia}</td>
+      <td>${e.hora}</td>
+      <td>${e.alarma}</td>
+      <td><button class="delete-btn" onclick="eliminarEntradaBeta(${i})">Eliminar</button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function eliminarEntradaBeta(index) {
+  const datos = JSON.parse(localStorage.getItem('horario-beta') || '[]');
+  datos.splice(index, 1);
+  localStorage.setItem('horario-beta', JSON.stringify(datos));
+  renderizarHorarioBeta();
+}
+
+function programarAlarma(hora, materia) {
+  const [h, m] = hora.split(':').map(Number);
+  const ahora = new Date();
+  const alarma = new Date();
+  alarma.setHours(h, m, 0, 0);
+  let espera = alarma - ahora;
+  if (espera < 0) espera += 86400000;
+  setTimeout(() => {
+    new Audio('https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg').play();
+    if (Notification.permission === 'granted') {
+      new Notification('TuniApp', { body: `¡Hora de tu clase: ${materia}!` });
+    }
+  }, espera);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  renderizarHorarioBeta();
+  if ('Notification' in window && Notification.permission === 'default') {
+    Notification.requestPermission();
+  }
+});
+</script>
+
+<script>
+  document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      const target = this.getAttribute("href").replace("#", "");
+      document.querySelectorAll("section").forEach(sec => {
+        sec.style.display = (sec.id === target) ? "block" : "none";
+      });
+    });
+  });
+
+  // Mostrar solo la primera sección inicialmente
+  window.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("section").forEach((sec, i) => {
+      sec.style.display = (i === 0) ? "block" : "none";
+    });
+  });
+</script>
+</body>
+</html>
+
